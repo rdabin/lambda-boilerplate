@@ -1,0 +1,7 @@
+{
+
+  "TestRequestHandler": {
+    "mockConfig": "mockConfigValue"
+  }
+
+}
