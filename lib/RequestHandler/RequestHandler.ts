@@ -1,7 +1,5 @@
 import * as Promise from "bluebird";
 import {BadRequestException} from "../BadRequestException/BadRequestException";
-// import {RequestValidator} from "../RequestValidator/RequestValidator";
-
 
 export abstract class RequestHandler {
 
@@ -19,7 +17,7 @@ export abstract class RequestHandler {
 
         return this.validateRequest(request).then(() => {
 
-            this.resolveRequest(request).then((result) => {
+            return this.resolveRequest(request).then((result) => {
 
                 return callback(null, { "statusCode": 200, "body": JSON.stringify(result) });
 
